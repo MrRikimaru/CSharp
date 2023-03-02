@@ -4,10 +4,7 @@
 
 Console.Write("Введите номер четверти:");
 int quarter = Convert.ToInt32(Console.ReadLine());
-string result = ((quarter > 0) && (quarter< 4))
-                        ? $"Указанной четверти соответсвуют следующий диапозон - {Quarter(quarter)}" 
-                        : "Введены некорректрные четверть.";
-Console.Write(result);
+Console.Write(Quarter(quarter));
 
 string Quarter(int quarter_value)
 {
@@ -15,5 +12,5 @@ string Quarter(int quarter_value)
     if (quarter_value == 2) return "X < 0, Y > 0";
     if (quarter_value == 3) return "X < 0, Y < 0";
     if (quarter_value == 4) return "X > 0, Y < 0";
-    return "0";
+    return "Некорректный ввод четверти!";
 }
