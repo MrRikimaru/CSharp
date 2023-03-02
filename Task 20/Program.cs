@@ -19,6 +19,5 @@ Console.Write($"A({xA},{yA}); B({xB}, {yB}) -> {Math.Round(Distance(xA, yA, xB, 
 
 double Distance(int xA, int yA, int xB, int yB)
 {
-    double dist = Math.Sqrt(Math.Pow(xB - xA, 2)+Math.Pow(yB - yA,2));
-    return dist;
+    return Math.Sqrt(Math.Pow(xB - xA, 2)+Math.Pow(yB - yA,2));
 }
