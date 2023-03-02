@@ -7,14 +7,14 @@ Console.Write("Введите пятизначное число:");
 int nmbr = Convert.ToInt32(Console.ReadLine());
 if (nmbr < 0) nmbr = -nmbr;
 if (nmbr < 10000) Console.Write("Некорректный ввод!");
-else Console.Write(Palindrome(nmbr) == true ? $"{nmbr} -> да." : $"{nmbr} -> нет.");
+else Console.Write(Palindrome(nmbr) ? $"{nmbr} -> да." : $"{nmbr} -> нет.");
 
 bool Palindrome(int nmbr)
 {
     int buffer = nmbr, mirorNmbr = 0;
     while (buffer > 0)
     {
-        mirorNmbr = mirorNmbr * 10 + buffer % 10;
+        mirorNmbr = mirorNmbr * 10 + buffer % 10; 
         buffer /= 10;
     }
     if (nmbr == mirorNmbr) return true;
