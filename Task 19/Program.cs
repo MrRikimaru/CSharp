@@ -5,22 +5,17 @@
 
 Console.Write("Введите пятизначное число:");
 int nmbr = Convert.ToInt32(Console.ReadLine());
-int buffer = nmbr, counter = 1;
-while (buffer > 10) 
-{
-    buffer /= 10; counter++;
-}
-if (counter < 5) Console.Write("Некорректный ввод!");
-else Console.Write(Palindrome(nmbr, counter) == true ? $"{nmbr} -> да." : $"{nmbr} -> нет.");
+if (nmbr < 0) nmbr = -nmbr;
+if (nmbr < 10000) Console.Write("Некорректный ввод!");
+else Console.Write(Palindrome(nmbr) == true ? $"{nmbr} -> да." : $"{nmbr} -> нет.");
 
-
-bool Palindrome(int nmbr, int counter)
+bool Palindrome(int nmbr)
 {
-    int buffer = nmbr, dec = Convert.ToInt32(Math.Pow(10, counter-1)), mirorNmbr = 0;
-    for (int i = 0; i < counter; i++)
+    int buffer = nmbr, mirorNmbr = 0;
+    while (buffer > 0)
     {
-        mirorNmbr += buffer % 10 * dec;
-        buffer /= 10; dec /= 10;
+        mirorNmbr = mirorNmbr * 10 + buffer % 10;
+        buffer /= 10;
     }
     if (nmbr == mirorNmbr) return true;
     else return false;
