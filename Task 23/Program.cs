@@ -10,10 +10,9 @@ void CubeTable(int nmbr)
 {
     if (nmbr > 0)
     {
-        Console.Write($"{nmbr} -> ");
         for (int i = 1; i <= nmbr; i++)
         {
-            Console.Write($"{i*i*i} ");
+            Console.WriteLine($"{i} -> {i*i*i} ");
         }
     }
     else Console.Write("Введено некорректное число!");
