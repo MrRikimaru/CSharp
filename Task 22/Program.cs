@@ -19,6 +19,4 @@ void TableSquare(int nmbr)
         }
     }
     else Console.Write("Введено некорректное число!");
-
-
 }
