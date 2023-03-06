@@ -10,7 +10,7 @@ Console.Write($"Количество цифр в числе {nmbr} = {NumberLeng
 int NumberLenght(int number_value)
 {
     int buffer = number_value, counter = 0;
-    while (buffer > 0)
+    while (buffer != 0)
     {
         buffer /= 10;counter++;
     }
