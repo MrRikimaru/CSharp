@@ -9,9 +9,9 @@ if (nmbr < 0) nmbr = -nmbr;
 if (nmbr < 10000) Console.Write("Некорректный ввод!");
 else Console.Write(Palindrome(nmbr) ? $"{nmbr} -> да." : $"{nmbr} -> нет.");
 
-bool Palindrome(int nmbr)
+bool Palindrome(int nmbr_value)
 {
-    int buffer = nmbr, mirorNmbr = 0;
+    int buffer = nmbr_value, mirorNmbr = 0;
     while (buffer > 0)
     {
         mirorNmbr = mirorNmbr * 10 + buffer % 10; 
