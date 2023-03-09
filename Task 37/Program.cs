@@ -42,7 +42,7 @@ int[] MultiplicationArrayElem(int[] arrayValue)
             else 
                 newArray[i] = arrayValue[i];
         }
-        newArray[i] = arrayValue[i] * arrayValue[arrayValue.Length - 1 - i];
+        else newArray[i] = arrayValue[i] * arrayValue[arrayValue.Length - 1 - i];
     }
     return newArray;
 }
