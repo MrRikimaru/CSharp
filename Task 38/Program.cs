@@ -5,7 +5,7 @@ Console.Write("Введие размер массива:");
 int arraySize = Convert.ToInt32(Console.ReadLine());
 double[] array = CreateArrayRndDouble(arraySize, 1, 100);
 PrintArrayDouble(array);
-Console.Write($"Разница между максимальным и минимальным элементом: {MaxArrayElem(array) - MinArrayElem(array)}.");
+Console.Write($"Разница между максимальным и минимальным элементом: {Math.Round(MaxArrayElem(array) - MinArrayElem(array), 1)}.");
 
 double[] CreateArrayRndDouble(int size, int min, int max)
 {
