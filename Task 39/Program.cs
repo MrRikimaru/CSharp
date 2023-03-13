@@ -4,14 +4,6 @@
 // [1 2 3 4 5] -> [5 4 3 2 1]
 // [6 7 3 6] -> [6 3 7 6]
 
-Console.Write("Введите размер массива:");
-int arraySize = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[arraySize];
-FillArray(array);
-PrintArrayInt(array);
-ReverseArray(array);
-PrintArrayInt(array);
-
 void FillArray(int[] arrayValue)
 {
     Random rnd = new Random();
@@ -42,3 +34,13 @@ int[] ReverseArray(int[] arr)
     }
     return arr;
 }
+
+Console.Write("Введите размер массива:");
+int arraySize = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[arraySize];
+FillArray(array);
+PrintArrayInt(array);
+ReverseArray(array);
+PrintArrayInt(array);
+Array.Reverse(array);
+PrintArrayInt(array);
