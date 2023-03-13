@@ -6,11 +6,8 @@
 
 Console.Write("Введите количество N: ");
 int size = Convert.ToInt32(Console.ReadLine());
-if (size > 2)
-{
-    int[] arr = new int[size];
-    PrintArray(Fibonacci(arr)); 
-}
+int[] arr = new int[size];
+PrintArray(Fibonacci(arr));
 
 void PrintArray(int[] array_value)
 {
